@@ -2,7 +2,7 @@
 
 This repository includes files to run docker and docker-compose on machu.jp.
 
-## nginx (using [jwilder/nginx-proxy])
+## nginx (using [jwilder/nginx-proxy](https://github.com/jwilder/docker-gen))
 
 The reverse proxy. This proxy detects containers automatically and sets up proxy configs.
 
@@ -28,7 +28,7 @@ Running container.
 $ docker-compose up
 ```
 
-## Reverse Proxy for Product Advertising API (using [tdiary/rpaproxy-sinatra])
+## Reverse Proxy for Product Advertising API (using [tdiary/rpaproxy-sinatra](https://github.com/tdiary/rpaproxy-sinatra))
 
 Running container.
 
