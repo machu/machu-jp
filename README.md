@@ -6,6 +6,8 @@ This repository includes files to run docker and docker-compose on machu.jp.
 
 The reverse proxy. This proxy detects containers automatically and sets up proxy configs.
 
+Running container.
+
 ```
 $ cd nginx
 $ docker-compose up
