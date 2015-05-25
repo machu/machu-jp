@@ -1,0 +1,17 @@
+mongodb:
+  image: mongo:latest
+
+memcached:
+  image: memcached:latest
+
+app:
+  image: tdiary/rpaproxy-sinatra
+  links:
+    - mongodb
+    - memcached
+  environment:
+    - RACK_ENV=production
+    - MEMCACHE_SERVERS=memcached:11211
+    - TWITTER_KEY
+    - TWITTER_SECRET
+    - VIRTUAL_HOST=rpaproxy.machu.jp
