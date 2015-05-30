@@ -7,7 +7,7 @@ RUN mkdir -p /var/pukiwiki/backup && \
     mkdir -p /var/pukiwiki/wiki && \
     chown -R www-data:www-data /var/pukiwiki && \
     ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
-COPY wolfbbs.conf /etc/apache2/sites-enabled/
+COPY pukiwiki.conf /etc/apache2/sites-enabled/
 COPY start.sh /usr/local/bin/
 COPY pukiwiki /var/www/html/
 RUN cp -p default.ini.php  keitai.ini.php  pukiwiki.ini.php  rules.ini.php en.lng.php  ja.lng.php /var/pukiwiki/ && \
