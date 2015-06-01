@@ -1,0 +1,7 @@
+app:
+  image: machu/tdiary
+  volumes:
+    - /home/core/var/tdiary/data:/usr/src/app/data
+  environment:
+    - VIRTUAL_HOST=www.machu.jp
+  restart: always
