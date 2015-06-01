@@ -4,3 +4,4 @@ app:
     - /home/core/var/pukiwiki-data:/var/pukiwiki
   environment:
     - VIRTUAL_HOST=wolfbbs.jp
+  restart: always

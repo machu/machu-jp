@@ -15,3 +15,4 @@ app:
     - TWITTER_KEY
     - TWITTER_SECRET
     - VIRTUAL_HOST=rpaproxy.machu.jp
+  restart: always
