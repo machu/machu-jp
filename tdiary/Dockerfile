@@ -16,5 +16,5 @@ RUN bundle --without=development:test:coffee --jobs=4 --retry=3
 COPY . /usr/src/app/
 
 VOLUME /usr/src/app/data
-EXPOSE 9292
-CMD [ "bundle", "exec", "rackup" ]
+EXPOSE 3000
+CMD [ "bundle", "exec", "puma", "-C", "puma.rb" ]
