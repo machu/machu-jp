@@ -41,3 +41,11 @@ $ docker-compose up
 
 To tell the hostname to nginx-proxy, VIRTUAL_HOST environment is added.
 
+### migrate database from mongohq.com
+
+To migrate database from mongohq.com, run this commands.
+
+```
+$ docker exec rpaproxy_mongodb_1 mongodump -h linus.mongohq.com:10097 -d app20350636 --username heroku --password your_mongohq_password
+$ docker exec rpaproxy_mongodb_1 mongorestore -d rpaproxy /dump/app20350636
+```
