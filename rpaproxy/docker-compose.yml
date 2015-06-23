@@ -14,5 +14,5 @@ app:
     - MEMCACHE_SERVERS=memcached:11211
     - TWITTER_KEY
     - TWITTER_SECRET
-    - VIRTUAL_HOST=rpaproxy.machu.jp
+    - VIRTUAL_HOST=rpaproxy.machu.jp,rpaproxy.tdiary.org
   restart: always
