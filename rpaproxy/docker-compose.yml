@@ -1,8 +1,10 @@
 mongodb:
   image: mongo:latest
+  restart: always
 
 memcached:
   image: memcached:latest
+  restart: always
 
 app:
   image: tdiary/rpaproxy-sinatra
