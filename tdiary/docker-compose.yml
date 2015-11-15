@@ -5,4 +5,5 @@ app:
   environment:
     - VIRTUAL_HOST=www.machu.jp
     - RACK_ENV=production
+    - NEW_RELIC_LICENSE_KEY
   restart: always
