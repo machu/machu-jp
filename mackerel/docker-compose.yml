@@ -1,0 +1,12 @@
+agent:
+  image: mackerel/mackerel-agent
+  domainname: machu.jp
+  hostname: coreos
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /var/lib/mackerel-agent/:/var/lib/mackerel-agent/
+    - /proc/mounts:/host/proc/mounts:ro
+    - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+  environment:
+    - apikey
+  restart: always
