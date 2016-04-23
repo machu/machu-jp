@@ -1,9 +1,21 @@
 app:
-  image: machu/tdiary
+  build: app
   volumes:
-    - /home/core/var/tdiary/data:/usr/src/app/data
+    - tdiary-data:/usr/src/app/data
+    - tdiary-public:/usr/src/app/public
   environment:
-    - VIRTUAL_HOST=www.machu.jp
-    - RACK_ENV=production
+    - RACK_ENV
     - NEW_RELIC_LICENSE_KEY
+  restart: always
+
+web:
+  build: web
+  ports:
+    - 80:80
+  links:
+    - app
+  volumes_from:
+    - app
+  environment:
+    - VIRTUAL_HOST=staging.machu.jp
   restart: always

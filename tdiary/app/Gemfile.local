@@ -1,5 +1,4 @@
 # use trunk
-gem 'tdiary', git: 'https://github.com/tdiary/tdiary-core.git'
 gem 'tdiary-contrib', git: 'https://github.com/tdiary/tdiary-contrib.git'
 
 # enable GFM style
