@@ -10,12 +10,10 @@ app:
 
 web:
   build: web
-  ports:
-    - 80:80
   links:
     - app
   volumes_from:
     - app
   environment:
-    - VIRTUAL_HOST=staging.machu.jp
+    - VIRTUAL_HOST=www.machu.jp
   restart: always
