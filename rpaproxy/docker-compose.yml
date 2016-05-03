@@ -1,5 +1,7 @@
 mongodb:
   image: mongo:latest
+  volumes:
+    - rpaproxy-data:/data/db
   restart: always
 
 memcached:
