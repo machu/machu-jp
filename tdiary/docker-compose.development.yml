@@ -1,0 +1,10 @@
+app:
+  ports:
+    - "9292:9292"
+  volumes:
+    - ./data:/usr/src/app/data
+    - ./app/theme/machu:/usr/src/app/theme/machu
+
+web:
+  ports:
+    - "80:80"
