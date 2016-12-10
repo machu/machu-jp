@@ -1,0 +1,119 @@
+body {
+  color: #444;
+  background-color: #fff;
+  margin: 0;
+  padding: 0 3em;
+  font-family: "Verdana", "Osaka", sans-serif;
+}
+
+h1 {
+  color: #fff;
+  background-color: #003399;
+  padding: 0.2em 0.5em;
+  margin: 0;
+  border-bottom: solid 4px #fc3;
+}
+
+h2 {
+  color: #498B7B;
+  background-color: inherit;
+  border-bottom: dashed 1px #aaa;
+}
+
+h1 a {
+  color: #fff;
+} 
+
+h2 a {
+  color: #498B7B;
+  background-color: inherit;
+}
+
+div.body {
+  margin: 0;
+  padding: 0.5em;
+  border: solid 1px #444;
+  height: 70%;
+}
+
+div.main {
+  margin: 0.2em 1em;
+  margin-left: 320px;
+  padding: 0.2em;
+}
+
+div.sidebar {
+  margin: 1px;
+  width: 300px;
+  float: left;
+  font-size: 90%;
+}
+
+div.sidebar img {
+  border: solid 1px #000;
+}
+
+div.sidebar ul {
+  margin: 0.5em;
+  list-style: none;
+  padding: 0;
+}
+
+div.sidebar li {
+  display: inline;
+  word-break: keep-all;
+}
+
+div.footer {
+  clear: both;
+  margin: 0.5em 0.5em;
+  padding: 0.2em 0.5em;
+  font-size: 90%;
+  border-top: solid 1px #888;
+}
+
+a {
+  color: #448;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  text-decoration: underline;
+}
+
+form {
+  margin: 0.1em 0.5em;
+}
+/* http://www.sovavsiti.cz/css/w3c_buttons.html */
+.w3cbutton {
+  float: right;
+  margin: 0.2em 0 0 0.2em;
+  padding: 1px;
+  width: 10em;
+  border: 1px solid #ccc;
+  font-family: helvetica, arial,sans-serif;
+  font-size: 70%;
+  font-weight: bold;
+}
+.w3cbutton a {
+  display: block;
+  width: 100%;
+}
+.w3cbutton a:link,
+.w3cbutton a:visited,
+.w3cbutton a:hover {
+  background-color: #ccc;
+  color: #000;
+  text-decoration: none;
+}
+.w3cbutton span.w3c {
+  padding: 0 0.4em;
+  background-color: #fff;
+  color: #0c479d;
+}
+.w3cbutton span.spec {
+  padding: 0 0 0 0.5em;
+}
