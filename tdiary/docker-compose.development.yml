@@ -1,9 +1,7 @@
 app:
-  ports:
-    - "9292:9292"
   volumes:
+    - ./app:/usr/src/app
     - ./data:/usr/src/app/data
-    - ./app/theme/machu:/usr/src/app/theme/machu
 
 web:
   ports:
