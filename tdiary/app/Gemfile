@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+# use trunk
+gem 'tdiary', github: 'tdiary/tdiary-core'
+gem 'tdiary-contrib', github: 'tdiary/tdiary-contrib'
+
+# enable GFM style
+gem 'tdiary-style-gfm'
+
+gem 'puma'
+gem 'newrelic_rpm'
+gem 'oga'

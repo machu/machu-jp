@@ -1,9 +1,0 @@
-# use trunk
-gem 'tdiary-contrib', git: 'https://github.com/tdiary/tdiary-contrib.git'
-
-# enable GFM style
-gem 'tdiary-style-gfm'
-
-gem 'puma'
-gem 'newrelic_rpm'
-gem 'oga'
