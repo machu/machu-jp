@@ -15,7 +15,7 @@ Copyright 2015 (C) MATSUOKA Kohei <kohei@machu.jp>
 }
 
 body {
-	font-family: "Hiragino", "Lato", sans-serif;
+	font-family: Avenir , Arial , Verdana , "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", "Meiryo UI", Meiryo, sans-serif;
 
 	text-align: center;
 	width: 100%;
@@ -109,7 +109,7 @@ div.main {
 
 div.day {
 	line-height: 170%;
-	color: #000;
+	color: #333;
 	background-color: white;
 	margin-right: 10px;
 	margin-bottom: 10px;
@@ -176,7 +176,7 @@ div.section h5 {
 	color: #cf7e7a;
 	background-color: #cf7e7a;
 	padding: 0.8em 1em 0 0;
-	font-size: 1px;
+	font-size: 0.8rem;
 }
 
 h3 a {
@@ -299,6 +299,7 @@ div.section img.photo {
 	float: none;
 	margin: 0px auto;
 	margin-bottom: 10px;
+	height: auto;
 }
 
 div.section div.footnote {
@@ -671,15 +672,12 @@ div.gist pre {
 	}
 
 	div.adminmenu {
-		font-size: x-small;
 		margin: 0px;
 		width: 100%;
 	}
 
 	h1 {
-		padding-top: 10px;
-		height: 40px;
-		font-size: 90%;
+		font-size: 2em;
 	}
 
 	div.content {
@@ -736,4 +734,3 @@ div.gist pre {
 		font-size: 110%;
 	}
 }
-
