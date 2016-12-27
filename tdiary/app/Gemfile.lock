@@ -1,13 +1,13 @@
 GIT
-  remote: git://github.com/tdiary/tdiary-contrib.git
-  revision: 2ba0e1a7d1842aab6ae0f4fd9d343175dca06e41
+  remote: https://github.com/tdiary/tdiary-contrib.git
+  revision: dac8006e533be71084a96c3c5ccbd61868d37a1e
   specs:
     tdiary-contrib (5.0.2)
       ruby-pushbullet
       tdiary
 
 GIT
-  remote: git://github.com/tdiary/tdiary-core.git
+  remote: https://github.com/tdiary/tdiary-core.git
   revision: 2d1972888361e1a3e5fc5582bb23076bce384782
   specs:
     tdiary (5.0.2.20161213)
