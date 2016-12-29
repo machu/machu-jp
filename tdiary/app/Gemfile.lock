@@ -72,7 +72,7 @@ GEM
       rouge (>= 2.0)
       twitter-text
     thor (0.19.4)
-    twitter-text (1.14.3)
+    twitter-text (1.14.2)
       unf (~> 0.1.0)
     unf (0.1.4)
       unf_ext
@@ -88,6 +88,7 @@ DEPENDENCIES
   tdiary!
   tdiary-contrib!
   tdiary-style-gfm
+  twitter-text (= 1.14.2)
 
 BUNDLED WITH
-   1.13.6
+   1.13.7
