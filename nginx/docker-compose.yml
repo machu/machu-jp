@@ -3,5 +3,16 @@ web:
   ports:
     - "80:80"
   volumes:
+    - nginx-certs:/etc/nginx/certs:ro
+    - /etc/nginx/vhost.d
+    - /usr/share/nginx/html
     - /var/run/docker.sock:/tmp/docker.sock:ro
   restart: always
+
+companion:
+  image: jrcs/letsencrypt-nginx-proxy-companion
+  volumes_from:
+    - web
+  volumes:
+    - nginx-certs:/etc/nginx/certs:rw
+    - /var/run/docker.sock:/tmp/docker.sock:ro

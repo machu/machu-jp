@@ -16,4 +16,6 @@ web:
     - app
   environment:
     - VIRTUAL_HOST=www.machu.jp
+    - LETSENCRYPT_HOST=www.machu.jp
+    - LETSENCRYPT_EMAIL=kmachu@gmail.com
   restart: always
