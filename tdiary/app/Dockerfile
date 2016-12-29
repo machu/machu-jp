@@ -1,7 +1,8 @@
 FROM ruby:2.3
 MAINTAINER MATSUOKA Kohei @machu
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app && \
+    bundle config github.https true
 WORKDIR /usr/src/app
 
 COPY [ "Gemfile", "Gemfile.lock", "/usr/src/app/" ]
