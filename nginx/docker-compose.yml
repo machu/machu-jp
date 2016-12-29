@@ -2,6 +2,7 @@ web:
   image: jwilder/nginx-proxy
   ports:
     - "80:80"
+    - "443:443"
   volumes:
     - nginx-certs:/etc/nginx/certs:ro
     - /etc/nginx/vhost.d
@@ -15,4 +16,4 @@ companion:
     - web
   volumes:
     - nginx-certs:/etc/nginx/certs:rw
-    - /var/run/docker.sock:/tmp/docker.sock:ro
+    - /var/run/docker.sock:/var/run/docker.sock:ro
