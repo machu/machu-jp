@@ -12,4 +12,3 @@ gem 'newrelic_rpm'
 gem 'oga'
 
 gem 'twitter-text', '1.14.2'
-
