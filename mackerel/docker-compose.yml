@@ -9,4 +9,7 @@ agent:
     - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
   environment:
     - apikey
+    - enable_docker_plugin=true
+    - auto_retirement=true
+    - opts=-v
   restart: always
