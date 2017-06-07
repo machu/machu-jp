@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tdiary/tdiary-contrib.git
-  revision: 425514dd9571947cab94d7e0f30dcc146434595a
+  revision: 05190ae18e3d5813975cff0c62c91de1269d9fb6
   specs:
     tdiary-contrib (5.0.4)
       ruby-pushbullet
