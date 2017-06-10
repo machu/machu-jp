@@ -11,7 +11,7 @@ web:
   restart: always
 
 companion:
-  image: alastaircoote/docker-letsencrypt-nginx-proxy-companion
+  image: jrcs/letsencrypt-nginx-proxy-companion
   volumes_from:
     - web
   volumes:
