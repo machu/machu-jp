@@ -1,4 +1,4 @@
-FROM php:apache
+FROM php:5-apache
 
 RUN mkdir -p /var/pukiwiki/backup && \
     mkdir -p /var/pukiwiki/cache && \
