@@ -1,0 +1,66 @@
+***************
+*** 167,172 ****
+  	$checked_top  = isset($vars['add_top'])     ? ' checked="checked"' : '';
+  	$checked_time = isset($vars['notimestamp']) ? ' checked="checked"' : '';
+  
+  	if(isset($vars['add'])) {
+  		$addtag  = '<input type="hidden" name="add" value="true" />';
+  		$add_top = '<input type="checkbox" name="add_top" value="true"' .
+--- 167,186 ----
+  	$checked_top  = isset($vars['add_top'])     ? ' checked="checked"' : '';
+  	$checked_time = isset($vars['notimestamp']) ? ' checked="checked"' : '';
+  
++ 	// Captcha
++ 	require_once(PLUGIN_DIR . 'hopchar.inc.php');
++ 	$r_num  = rand(0, PLUGIN_HOPCHAR_MAX_NUMBER - 1);
++ 	$hash   = md5('PukiWiki' . $r_num . $page);
++ 	$_imglink = plugin_hopchar_get_img($r_num);
++ 	$captcha_form = <<<EOD
++ <blockquote>
++  $_imglink
++  <label for="_edit_form_captcha"><span class="small">
++  画像と同じ番号を入力 :</span></label>
++  <input type="text" id="_edit_form_captcha" name="captcha" value="" size="4" />
++ </blockquote>
++ EOD;
++ 
+  	if(isset($vars['add'])) {
+  		$addtag  = '<input type="hidden" name="add" value="true" />';
+  		$add_top = '<input type="checkbox" name="add_top" value="true"' .
+***************
+*** 202,207 ****
+  	$r_page      = rawurlencode($page);
+  	$s_page      = htmlspecialchars($page);
+  	$s_digest    = htmlspecialchars($digest);
+  	$s_postdata  = htmlspecialchars($refer . $postdata);
+  	$s_original  = isset($vars['original']) ? htmlspecialchars($vars['original']) : $s_postdata;
+  	$b_preview   = isset($vars['preview']); // TRUE when preview
+--- 216,222 ----
+  	$r_page      = rawurlencode($page);
+  	$s_page      = htmlspecialchars($page);
+  	$s_digest    = htmlspecialchars($digest);
++ 	$s_hash      = htmlspecialchars($hash);
+  	$s_postdata  = htmlspecialchars($refer . $postdata);
+  	$s_original  = isset($vars['original']) ? htmlspecialchars($vars['original']) : $s_postdata;
+  	$b_preview   = isset($vars['preview']); // TRUE when preview
+***************
+*** 231,238 ****
+    <input type="hidden" name="cmd"    value="edit" />
+    <input type="hidden" name="page"   value="$s_page" />
+    <input type="hidden" name="digest" value="$s_digest" />
+    <textarea name="msg" rows="$rows" cols="$cols">$s_postdata</textarea>
+    <br />
+    <input type="submit" name="preview" value="$btn_preview" accesskey="p" />
+    <input type="submit" name="write"   value="$_btn_update" accesskey="s" />
+    $add_top
+--- 246,255 ----
+    <input type="hidden" name="cmd"    value="edit" />
+    <input type="hidden" name="page"   value="$s_page" />
+    <input type="hidden" name="digest" value="$s_digest" />
++   <input type="hidden" name="hash"   value="$s_hash" />
+    <textarea name="msg" rows="$rows" cols="$cols">$s_postdata</textarea>
+    <br />
++   $captcha_form
+    <input type="submit" name="preview" value="$btn_preview" accesskey="p" />
+    <input type="submit" name="write"   value="$_btn_update" accesskey="s" />
+    $add_top

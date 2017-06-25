@@ -1,0 +1,73 @@
+***************
+*** 33,45 ****
+  }
+  
+  // Preview
+- function plugin_edit_preview()
+  {
+  	global $vars;
+  	global $_title_preview, $_msg_preview, $_msg_preview_delete;
+  
+  	$page = isset($vars['page']) ? $vars['page'] : '';
+  
+  	// Loading template
+  	if (isset($vars['template_page']) && is_page($vars['template_page'])) {
+  
+--- 33,50 ----
+  }
+  
+  // Preview
++ function plugin_edit_preview($msgno = 0)
+  {
+  	global $vars;
+  	global $_title_preview, $_msg_preview, $_msg_preview_delete;
+  
+  	$page = isset($vars['page']) ? $vars['page'] : '';
+  
++ 	$body_msg = $_msg_preview;
++ 	if ($msgno==1) {
++ 		$body_msg = '画像の数字を正しく入力してください。';
++ 	}
++ 
+  	// Loading template
+  	if (isset($vars['template_page']) && is_page($vars['template_page'])) {
+  
+***************
+*** 60,66 ****
+  		}
+  	}
+  
+- 	$body = "$_msg_preview<br />\n";
+  	if ($postdata == '')
+  		$body .= "<strong>$_msg_preview_delete</strong>";
+  	$body .= "<br />\n";
+--- 65,71 ----
+  		}
+  	}
+  
++ 	$body = "$body_msg<br />\n";
+  	if ($postdata == '')
+  		$body .= "<strong>$_msg_preview_delete</strong>";
+  	$body .= "<br />\n";
+***************
+*** 179,184 ****
+  
+  	$page = isset($vars['page']) ? $vars['page'] : '';
+  	$retvars = array();
+  
+  	$vars['msg'] = preg_replace(PLUGIN_EDIT_FREEZE_REGEX,'',$vars['msg']);
+  	$postdata = $postdata_input = $vars['msg'];
+--- 184,196 ----
+  
+  	$page = isset($vars['page']) ? $vars['page'] : '';
+  	$retvars = array();
++ 
++ 	// Captcha Chack
++ 	$captcha = isset($vars['captcha']) ? $vars['captcha'] : '';
++ 	$hash    = isset($vars['hash']) ? $vars['hash'] : '';
++ 
++ 	if($hash != md5('PukiWiki' . $captcha . $page))
++ 		return plugin_edit_preview(1);
+  
+  	$vars['msg'] = preg_replace(PLUGIN_EDIT_FREEZE_REGEX,'',$vars['msg']);
+  	$postdata = $postdata_input = $vars['msg'];

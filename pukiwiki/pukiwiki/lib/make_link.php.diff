@@ -1,0 +1,20 @@
+Index: make_link.php
+===================================================================
+--- make_link.php	(revision 6)
++++ make_link.php	(working copy)
+@@ -735,8 +735,13 @@
+ 			$al_left = $al_right = '';
+ 		}
+ 
+-    return $al_left . '<a ' . 'href="' . $r_page . '.html' . $anchor .
+-			'"' . $title . '>' . $s_alias . '</a>' . $al_right;
++    if(strstr($page, '/')) {
++      return $al_left . '<a ' . 'href="' . $script . '?' . $r_page . $anchor .
++        '"' . $title . '>' . $s_alias . '</a>' . $al_right;
++    } else {
++      return $al_left . '<a ' . 'href="' . $r_page . '.html' . $anchor .
++			  '"' . $title . '>' . $s_alias . '</a>' . $al_right;
++    }
+ 	} else {
+ 		// Dangling link
+ 		if (PKWK_READONLY) return $s_alias; // No dacorations

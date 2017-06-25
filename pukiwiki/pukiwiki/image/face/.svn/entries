@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1"
+   name=""
+   committed-date="2006-02-11T03:03:17.161285Z"
+   url="file:///home/machu/svn/pukiwiki/trunk/image/face"
+   last-author="machu"
+   kind="dir"
+   uuid="fbb3d80f-7c0c-0410-817f-dc1259a49fe6"
+   revision="3"/>
+<entry
+   committed-rev="1"
+   name="heart.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="7efc2c3e660a0cd8483e8225e5dcc4b9"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="huh.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="7e0e85de6bcbe983a42b19d0e70e744d"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="oh.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="b4ad4d7dafe2a77ed2708a1eeb77779a"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="index.html"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="10d2982e0f7391333f6398584c348211"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="sad.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="ec4efb7c9930751a1b3efdd752f1abe2"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="wink.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="3f88fb958581f8880bd7438d023391fd"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="smile.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="b66b64cdc383b0fb1bd33a822b205669"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="bigsmile.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="c0101bd75321e9ba610d2267884125ca"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+<entry
+   committed-rev="1"
+   name="worried.png"
+   text-time="2006-02-11T03:05:26.000000Z"
+   committed-date="2006-02-11T03:03:17.161285Z"
+   checksum="9ccbad5b245d3cc1d155ace67c3ca3a9"
+   last-author="machu"
+   kind="file"
+   prop-time="2006-02-11T03:05:26.000000Z"/>
+</wc-entries>
