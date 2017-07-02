@@ -1,16 +1,16 @@
 GIT
-  remote: https://github.com/tdiary/tdiary-contrib.git
-  revision: 05190ae18e3d5813975cff0c62c91de1269d9fb6
+  remote: http://github.com/tdiary/tdiary-contrib.git
+  revision: f6fcb3c226c53f18e5e8cc995e37615bedfac2bf
   specs:
-    tdiary-contrib (5.0.4)
+    tdiary-contrib (5.0.5)
       ruby-pushbullet
       tdiary
 
 GIT
-  remote: https://github.com/tdiary/tdiary-core.git
-  revision: cf7aebe4483c686a4d87861421af7c48e8b38b82
+  remote: http://github.com/tdiary/tdiary-core.git
+  revision: bfaffb6fbbcaf71b20982271242cdb443cf76d69
   specs:
-    tdiary (5.0.4)
+    tdiary (5.0.5)
       bundler (~> 1.3)
       emot
       fastimage
@@ -22,7 +22,7 @@ GIT
       thor
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     ansi (1.5.0)
     ast (2.3.0)
@@ -37,7 +37,7 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     json (2.1.0)
-    mail (2.6.5)
+    mail (2.6.6)
       mime-types (>= 1.16, < 4)
     mime-types (2.99.3)
     netrc (0.11.0)
@@ -52,7 +52,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rouge (2.0.7)
+    rouge (2.1.1)
     ruby-ll (2.1.2)
       ansi
       ast
