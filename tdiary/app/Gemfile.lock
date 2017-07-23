@@ -1,5 +1,5 @@
 GIT
-  remote: http://github.com/tdiary/tdiary-contrib.git
+  remote: https://github.com/tdiary/tdiary-contrib.git
   revision: f6fcb3c226c53f18e5e8cc995e37615bedfac2bf
   specs:
     tdiary-contrib (5.0.5)
@@ -7,7 +7,7 @@ GIT
       tdiary
 
 GIT
-  remote: http://github.com/tdiary/tdiary-core.git
+  remote: https://github.com/tdiary/tdiary-core.git
   revision: bfaffb6fbbcaf71b20982271242cdb443cf76d69
   specs:
     tdiary (5.0.5)
@@ -22,7 +22,7 @@ GIT
       thor
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     ansi (1.5.0)
     ast (2.3.0)
@@ -81,10 +81,11 @@ DEPENDENCIES
   newrelic_rpm
   oga
   puma
+  rake
   tdiary!
   tdiary-contrib!
   tdiary-style-gfm
   twitter-text (= 1.14.2)
 
 BUNDLED WITH
-   1.13.7
+   1.15.3

@@ -1,4 +1,4 @@
-FROM ruby:2.3
+FROM ruby:2.4
 MAINTAINER MATSUOKA Kohei @machu
 
 RUN mkdir -p /usr/src/app && \
@@ -9,7 +9,7 @@ COPY [ "Gemfile", "Gemfile.lock", "/usr/src/app/" ]
 RUN bundle --without=development:test --jobs=4 --retry=3
 
 COPY . /usr/src/app/
-RUN bundle exec rake assets:copy
+RUN bundle && bundle exec rake assets:copy
 
 VOLUME [ "/usr/src/app/data", "/usr/src/app/public" ]
 EXPOSE 9292
