@@ -1,15 +1,17 @@
-agent:
-  image: mackerel/mackerel-agent
-  domainname: machu.jp
-  hostname: coreos
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-    - /var/lib/mackerel-agent/:/var/lib/mackerel-agent/
-    - /proc/mounts:/host/proc/mounts:ro
-    - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
-  environment:
-    - apikey
-    - enable_docker_plugin=true
-    - auto_retirement=true
-    - opts=-v
-  restart: always
+version: '2'
+services:
+  agent:
+    image: mackerel/mackerel-agent
+    domainname: machu.jp
+    hostname: coreos
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/mackerel-agent/:/var/lib/mackerel-agent/
+      - /proc/mounts:/host/proc/mounts:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+    environment:
+      - apikey
+      - enable_docker_plugin=true
+      - auto_retirement=true
+      - opts=-v
+    restart: always
