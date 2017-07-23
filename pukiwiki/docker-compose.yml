@@ -1,7 +1,13 @@
-app:
-  image: machu/pukiwiki
-  volumes:
-    - /home/core/var/pukiwiki-data:/var/pukiwiki
-  environment:
-    - VIRTUAL_HOST=wolfbbs.jp
-  restart: always
+version: '2'
+services:
+  app:
+    image: machu/pukiwiki
+    volumes:
+      - /home/core/var/pukiwiki-data:/var/pukiwiki
+    environment:
+      - VIRTUAL_HOST=wolfbbs.jp
+    restart: always
+networks:
+  default:
+    external:
+      name: nginx-proxy

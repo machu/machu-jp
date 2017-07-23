@@ -25,3 +25,7 @@ volumes:
     external: true
   tdiary-public:
     external: true
+networks:
+  default:
+    external:
+      name: nginx-proxy

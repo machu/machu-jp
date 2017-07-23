@@ -1,20 +1,25 @@
-web:
-  image: jwilder/nginx-proxy
-  ports:
-    - "80:80"
-    - "443:443"
-  volumes:
-    - nginx-certs:/etc/nginx/certs:ro
-    - /etc/nginx/vhost.d
-    - /usr/share/nginx/html
-    - /var/run/docker.sock:/tmp/docker.sock:ro
-  restart: always
+version: '2'
+services:
+  web:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/nginx/certs
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: always
 
-companion:
-  image: jrcs/letsencrypt-nginx-proxy-companion
-  volumes_from:
-    - web
-  volumes:
-    - nginx-certs:/etc/nginx/certs:rw
-    - /var/run/docker.sock:/var/run/docker.sock:ro
-  restart: always
+  companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    volumes_from:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: always
+networks:
+  default:
+    external:
+      name: nginx-proxy

@@ -1,23 +1,32 @@
-mongodb:
-  image: mongo:latest
-  volumes:
-    - rpaproxy-data:/data/db
-  restart: always
+version: '2'
+services:
+  mongodb:
+    image: mongo:latest
+    volumes:
+      - rpaproxy-data:/data/db
+    restart: always
 
-memcached:
-  image: memcached:latest
-  restart: always
+  memcached:
+    image: memcached:latest
+    restart: always
 
-app:
-  image: tdiary/rpaproxy-sinatra
-  links:
-    - mongodb
-    - memcached
-  environment:
-    - RACK_ENV=production
-    - MEMCACHE_SERVERS=memcached:11211
-    - TWITTER_KEY
-    - TWITTER_SECRET
-    - NEW_RELIC_LICENSE_KEY
-    - VIRTUAL_HOST=rpaproxy.machu.jp,rpaproxy.tdiary.org
-  restart: always
+  app:
+    image: tdiary/rpaproxy-sinatra
+    links:
+      - mongodb
+      - memcached
+    environment:
+      - RACK_ENV=production
+      - MEMCACHE_SERVERS=memcached:11211
+      - TWITTER_KEY
+      - TWITTER_SECRET
+      - NEW_RELIC_LICENSE_KEY
+      - VIRTUAL_HOST=rpaproxy.machu.jp,rpaproxy.tdiary.org
+    restart: always
+volumes:
+  rpaproxy-data:
+    external: true
+networks:
+  default:
+    external:
+      name: nginx-proxy
