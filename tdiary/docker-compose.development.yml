@@ -1,8 +1,5 @@
-app:
-  volumes:
-    - ./app:/usr/src/app
-    - ./data:/usr/src/app/data
-
-web:
-  ports:
-    - "80:80"
+version: '2'
+services:
+  web:
+    ports:
+      - "80:80"

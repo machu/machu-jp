@@ -1,21 +1,27 @@
-app:
-  build: app
-  volumes:
-    - tdiary-data:/usr/src/app/data
-    - tdiary-public:/usr/src/app/public
-  environment:
-    - RACK_ENV
-    - NEW_RELIC_LICENSE_KEY
-  restart: always
-
-web:
-  build: web
-  links:
-    - app
-  volumes_from:
-    - app
-  environment:
-    - VIRTUAL_HOST=www.machu.jp
-    - LETSENCRYPT_HOST=www.machu.jp
-    - LETSENCRYPT_EMAIL=kmachu@gmail.com
-  restart: always
+version: '2'
+services:
+  app:
+    build: app
+    volumes:
+      - tdiary-data:/usr/src/app/data
+      - tdiary-public:/usr/src/app/public
+    environment:
+      - RACK_ENV
+      - NEW_RELIC_LICENSE_KEY
+    restart: always
+  web:
+    build: web
+    links:
+      - app
+    volumes_from:
+      - app
+    environment:
+      - VIRTUAL_HOST=www.machu.jp
+      - LETSENCRYPT_HOST=www.machu.jp
+      - LETSENCRYPT_EMAIL=kmachu@gmail.com
+    restart: always
+volumes:
+  tdiary-data:
+    external: true
+  tdiary-public:
+    external: true
