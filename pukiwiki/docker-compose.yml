@@ -6,6 +6,8 @@ services:
       - /home/core/var/pukiwiki-data:/var/pukiwiki
     environment:
       - VIRTUAL_HOST=wolfbbs.jp
+      - LETSENCRYPT_HOST=wolfbbs.jp
+      - LETSENCRYPT_EMAIL=kmachu@gmail.com
     restart: always
 networks:
   default:
