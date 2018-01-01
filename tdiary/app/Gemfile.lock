@@ -1,16 +1,16 @@
 GIT
   remote: https://github.com/tdiary/tdiary-contrib.git
-  revision: 596d83919497a4ad42bd408960f52fc389f6ec16
+  revision: a40096d3fb487a38619e8f24d11367ae59b50238
   specs:
-    tdiary-contrib (5.0.6)
-      ruby-pushbullet
+    tdiary-contrib (5.0.7)
+      pushbullet_ruby
       tdiary
 
 GIT
   remote: https://github.com/tdiary/tdiary-core.git
-  revision: cf2112645803a5c1ad62f552cdb84bc76ba6e030
+  revision: 25390d4bb69b50097f2819574660aaceecb978d0
   specs:
-    tdiary (5.0.6)
+    tdiary (5.0.7)
       bundler (~> 1.3)
       emot
       fastimage
@@ -27,46 +27,42 @@ GEM
     ansi (1.5.0)
     ast (2.3.0)
     concurrent-ruby (1.0.5)
-    domain_name (0.5.20170404)
-      unf (>= 0.0.5, < 1.0.0)
     emot (0.0.4)
       thor
-    fastimage (2.1.0)
+    faraday (0.13.1)
+      multipart-post (>= 1.2, < 3)
+    fastimage (2.1.1)
     github-markdown (0.6.9)
     hikidoc (0.1.0)
-    http-cookie (1.0.3)
-      domain_name (~> 0.5)
-    json (2.1.0)
-    mail (2.6.6)
-      mime-types (>= 1.16, < 4)
-    mime-types (2.99.3)
-    netrc (0.11.0)
-    newrelic_rpm (4.5.0.337)
-    oga (2.11)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_mime (1.0.0)
+    multipart-post (2.0.0)
+    newrelic_rpm (4.7.1.340)
+    oga (2.12)
       ast
       ruby-ll (~> 2.1)
-    puma (3.10.0)
+    puma (3.11.0)
+    pushbullet_ruby (1.1.2)
+      faraday (~> 0.13.0)
+      mime-types
     rack (2.0.3)
-    rake (12.1.0)
-    rest-client (1.8.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
-    rouge (3.0.0)
+    rake (12.3.0)
+    rouge (3.1.0)
     ruby-ll (2.1.2)
       ansi
       ast
-    ruby-pushbullet (0.1.4)
-      json
-      rest-client (~> 1.8.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    tdiary-style-gfm (0.5.1)
+    tdiary-style-gfm (0.5.2)
       emot
       github-markdown
       rouge (>= 2.2)
-      twitter-text
+      twitter-text (~> 1.0)
     thor (0.20.0)
     twitter-text (1.14.2)
       unf (~> 0.1.0)
