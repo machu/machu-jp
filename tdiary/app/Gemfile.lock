@@ -1,74 +1,83 @@
 GIT
   remote: https://github.com/tdiary/tdiary-contrib.git
-  revision: a40096d3fb487a38619e8f24d11367ae59b50238
+  revision: d1e41204db13879c22787fff1bae2446590bdfc8
   specs:
-    tdiary-contrib (5.0.7)
+    tdiary-contrib (5.1.5)
+      coderay
+      holiday_japan
       pushbullet_ruby
-      tdiary
+      tdiary (~> 5.0)
 
 GIT
   remote: https://github.com/tdiary/tdiary-core.git
-  revision: 25390d4bb69b50097f2819574660aaceecb978d0
+  revision: 6da2f05a38908b7477bb796631fe7088ce486757
   specs:
-    tdiary (5.0.7)
-      bundler (~> 1.3)
+    tdiary (5.1.5)
+      bundler (>= 1.3, < 3.0)
       emot
       fastimage
       hikidoc
       mail
       rack
       rake
-      sprockets
+      rexml
       thor
+      webrick
 
 GEM
   remote: https://rubygems.org/
   specs:
     ansi (1.5.0)
-    ast (2.3.0)
-    concurrent-ruby (1.0.5)
+    ast (2.4.2)
+    coderay (1.1.3)
+    commonmarker (0.21.2)
+      ruby-enum (~> 0.5)
+    concurrent-ruby (1.1.8)
     emot (0.0.4)
       thor
-    faraday (0.13.1)
+    faraday (0.17.4)
       multipart-post (>= 1.2, < 3)
-    fastimage (2.1.1)
-    github-markdown (0.6.9)
+    fastimage (2.2.3)
     hikidoc (0.1.0)
-    mail (2.7.0)
+    holiday_japan (1.4.4)
+    i18n (1.8.9)
+      concurrent-ruby (~> 1.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
-    mime-types (3.1)
+    mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0521)
-    mini_mime (1.0.0)
-    multipart-post (2.0.0)
-    newrelic_rpm (4.7.1.340)
-    oga (2.12)
+    mime-types-data (3.2021.0225)
+    mini_mime (1.0.2)
+    multipart-post (2.1.1)
+    newrelic_rpm (6.15.0)
+    nio4r (2.5.7)
+    oga (3.3)
       ast
       ruby-ll (~> 2.1)
-    puma (3.11.0)
-    pushbullet_ruby (1.1.2)
-      faraday (~> 0.13.0)
+    puma (5.2.2)
+      nio4r (~> 2.0)
+    pushbullet_ruby (1.1.4)
+      faraday (>= 0.13.0, < 1.0)
       mime-types
-    rack (2.0.3)
-    rake (12.3.0)
-    rouge (3.1.0)
+    rack (2.2.3)
+    rake (13.0.3)
+    rexml (3.2.4)
+    ruby-enum (0.9.0)
+      i18n
     ruby-ll (2.1.2)
       ansi
       ast
-    sprockets (3.7.1)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
-    tdiary-style-gfm (0.5.2)
+    tdiary-style-gfm (1.0.0)
+      commonmarker
       emot
-      github-markdown
-      rouge (>= 2.2)
       twitter-text (~> 1.0)
-    thor (0.20.0)
+    thor (1.1.0)
     twitter-text (1.14.2)
       unf (~> 0.1.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.4)
+    unf_ext (0.0.7.7)
+    webrick (1.7.0)
 
 PLATFORMS
   ruby
@@ -84,4 +93,4 @@ DEPENDENCIES
   twitter-text (= 1.14.2)
 
 BUNDLED WITH
-   1.15.4
+   2.2.13
