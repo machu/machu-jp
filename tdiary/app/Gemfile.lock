@@ -1,29 +1,3 @@
-GIT
-  remote: https://github.com/tdiary/tdiary-contrib.git
-  revision: d1e41204db13879c22787fff1bae2446590bdfc8
-  specs:
-    tdiary-contrib (5.1.5)
-      coderay
-      holiday_japan
-      pushbullet_ruby
-      tdiary (~> 5.0)
-
-GIT
-  remote: https://github.com/tdiary/tdiary-core.git
-  revision: 6da2f05a38908b7477bb796631fe7088ce486757
-  specs:
-    tdiary (5.1.5)
-      bundler (>= 1.3, < 3.0)
-      emot
-      fastimage
-      hikidoc
-      mail
-      rack
-      rake
-      rexml
-      thor
-      webrick
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,6 +41,22 @@ GEM
     ruby-ll (2.1.2)
       ansi
       ast
+    tdiary (5.1.5)
+      bundler (>= 1.3, < 3.0)
+      emot
+      fastimage
+      hikidoc
+      mail
+      rack
+      rake
+      rexml
+      thor
+      webrick
+    tdiary-contrib (5.1.5)
+      coderay
+      holiday_japan
+      pushbullet_ruby
+      tdiary (~> 5.0)
     tdiary-style-gfm (1.0.0)
       commonmarker
       emot
@@ -87,10 +77,10 @@ DEPENDENCIES
   oga
   puma
   rake
-  tdiary!
-  tdiary-contrib!
+  tdiary
+  tdiary-contrib
   tdiary-style-gfm
   twitter-text (= 1.14.2)
 
 BUNDLED WITH
-   2.2.13
+   2.2.3
