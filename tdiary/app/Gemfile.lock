@@ -35,7 +35,7 @@ GEM
       mime-types
     rack (2.2.3)
     rake (13.0.3)
-    rexml (3.2.4)
+    rexml (3.2.5)
     ruby-enum (0.9.0)
       i18n
     ruby-ll (2.1.2)
