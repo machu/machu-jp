@@ -1,5 +1,4 @@
-FROM ruby:3.0.0
-MAINTAINER MATSUOKA Kohei @machu
+FROM ruby:3.1.1
 
 RUN mkdir -p /usr/src/app && \
     bundle config github.https true
