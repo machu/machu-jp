@@ -29,7 +29,7 @@ GEM
     pushbullet_ruby (1.1.4)
       faraday (>= 0.13.0, < 1.0)
       mime-types
-    rack (2.2.3)
+    rack (3.0.4.1)
     rake (13.0.6)
     rexml (3.2.5)
     ruby-ll (2.1.2)
