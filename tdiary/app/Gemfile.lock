@@ -4,7 +4,7 @@ GEM
     ansi (1.5.0)
     ast (2.4.2)
     coderay (1.1.3)
-    commonmarker (0.23.4)
+    commonmarker (0.23.7)
     emot (0.0.4)
       thor
     faraday (0.17.5)
